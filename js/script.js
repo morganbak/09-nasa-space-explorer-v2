@@ -1,7 +1,6 @@
-// NASA Space Explorer (JSON version with modal)
 console.log("NASA Space Explorer: JSON mode active");
 
-// Random space fact just for fun
+// Random space fact
 const spaceFacts = [
   "Venus rotates clockwise, unlike most planets.",
   "Jupiter’s Great Red Spot is a giant storm that’s lasted over 300 years.",
@@ -11,7 +10,7 @@ const spaceFacts = [
   "There may be more stars in the universe than grains of sand on Earth."
 ];
 
-// Show a random fact above the gallery
+// Show random fact above gallery
 function showRandomFact() {
   const fact = spaceFacts[Math.floor(Math.random() * spaceFacts.length)];
   let factElem = document.getElementById("spaceFact");
@@ -21,7 +20,7 @@ function showRandomFact() {
     factElem.style.fontSize = "16px";
     factElem.style.marginBottom = "15px";
     factElem.style.textAlign = "center";
-    factElem.style.color = "#333";
+    factElem.style.color = "#fff";
     document
       .querySelector(".container")
       .insertBefore(factElem, document.getElementById("gallery"));
@@ -42,7 +41,7 @@ const modalTitle = document.getElementById("modalTitle");
 const modalDate = document.getElementById("modalDate");
 const modalExplanation = document.getElementById("modalExplanation");
 
-// JSON data source (simulates NASA APOD API)
+// JSON data
 const apodJSON = "https://cdn.jsdelivr.net/gh/GCA-Classroom/apod/data.json";
 
 // Fetch and display gallery
@@ -118,7 +117,7 @@ async function fetchSpaceImages() {
   }
 }
 
-// Enable modal logic
+// Enable modal
 function enableModal() {
   const galleryItems = document.querySelectorAll(".gallery-item");
 
@@ -177,3 +176,4 @@ modal.addEventListener("click", (e) => {
     if (existingVideo) existingVideo.remove();
   }
 });
+
