@@ -14,14 +14,29 @@
     </header>
 
     <div class="filters">
+      <input type="date" id="startDate" />
+      <input type="date" id="endDate" />
       <button id="getImageBtn">Fetch Space Images</button>
     </div>
+
+    <!-- Random fact will be inserted here by JS -->
 
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
         <p>Click "Fetch Space Images" to explore the cosmos!</p>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close-button">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDate"></p>
+      <p id="modalExplanation"></p>
     </div>
   </div>
 
